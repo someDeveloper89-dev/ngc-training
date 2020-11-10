@@ -22,23 +22,19 @@
 
 > **2. Setup Environment Variables**
 
-- To setup Environment Variables in Postman Click on the *eye-icon* on the top right corner of Postman
+- To setup Environment Variables in Postman Click on the ![icon](images/icon.png) on the top right corner of Postman
 
 ![postman_env_var](images/env_var.png)
 
-- Select **Add** aside of **Environment** label to add Environment specific Variables
+- Click on import button to store the Environment Variables into your postman
 
-- Select **Edit** aside of **Globals** label to add variables that can be accessed Globally (Not specific to a particular environment)
+![manageVariable](images/manage_var.png)
 
-![add_environment_variables](images/env_var_view.png)
+- Click on choose file to select *json-file* from your local computer.
 
-- Under the Manage Environment window add the required variable and its corresponding variable value
+![var](images/manage_var1.png)
 
-- Enter an Environment name. for example, ***Development***
-
-- Click on the **Add** button to save the Environment Variables
-
-![manage_environment](images/manage_variable.png)
+**Note:** [Reference to JSON-FILE to import Environment Variables into your Postman](https://drive.google.com/file/d/1rwl2R7BVwS0sGvAI8kj5T9YTdL5TZe1f/view)
 
 
 > **3. Access Variables Stored in Environment Variables**

@@ -7,7 +7,7 @@ The purpose of this lesson is to give an overview of different NGC Microservices
 2. How do NGC Microservices API get authenticated through ServiceNow?
 3. The five big ones we use
     - Create App Environment
-    - Manage TFE Credentials
+    - RITM Status Check
     - Get environment details
     - Create config Params
     - Naming services
@@ -17,7 +17,7 @@ The purpose of this lesson is to give an overview of different NGC Microservices
 5. Lab-02 Session: Create app env through postman  
 6. Lab-03 Session: Using the microservices to perform the following calls:
     - Create App Environment
-    - Manage TFE Credentials
+    - RITM Status Check
     - Get environment details
     - Create config Params
     - Naming services

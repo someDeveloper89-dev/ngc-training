@@ -5,7 +5,7 @@ The purpose of this lesson plan is to walk you through the five major NGC servic
 ## The Five Big One we use are:
 
 - Create App Environment
-- Manage TFE Credentials
+- RITM Status Check
 - Get environment details
 - Create config Params
 - Naming services
@@ -46,25 +46,23 @@ This API is used to submit a Create Application Environment request which trigge
 |portal_users|Text|Specify the list of Azure Read only users or portal users. Specify valid PwC email addresses|
 |subscription|Name of the Subscription to be used|Specify the subscription name to be used.|
 |tfe_workspaces|JSON list|Specify the purpose of TFE workspace and TFE workspace suffix.|
-||||
 
 
-> # **Manage TFE Credentials**
+
+> # **RITM Status Check**
 
 ## Purpose
+This Api is used to retrieve the status of RITM ticket number from servicenow.
 
-This API is used to update/recycle the Azure credentials vaulted in the secure variables on the TFE Workspaces for an application environment. The SPNs are created dynamically via NGC Vault and are short -lived for the duration of the deployment. It is expected to recycle the credentials for every deployment.
-
-**Endpoint:** https://api-central-sit.pwc.com/ngc-sandbox-service/v3/pwc_nextgen_request/manage_tfe_credentials
+**Endpoint:** https://api-central-sit.pwc.com/ngc-sandbox-service/v3/pwc_nextgen_request/ritm_status_check
 
 **Request Type:** POST
 
-**Parameters:** 
+**Body Parameters:** 
+
 | Label(name) | Options | Description |
 |-------|-------|-------|
-|requested_for|Email of the person the request is being submitted on behalf of|Specify the PWC email address of the person for whom the request is being submitted.|
-|environment_id|App Environment Id|Specify the Application Environment ID of the Application Environment.|
-||||
+|ritm_number|RITM ticket no.|RITM ticket number generated at Servicenow|
 
 > # **Get environment details**
 
@@ -80,7 +78,7 @@ This API is used to retrieve all relevant details and config parameters of an en
 | Label(name) | Options | Description |
 |-------|-------|-------|
 |environment_id|App Environment ID of the Application Environment|Specify the Application Environment ID of the Application Environment.|
-||||
+
 
 > # **Create config Params**
 
@@ -97,7 +95,7 @@ This API is used to create config parameters for an environment.
 |-------|-------|-------|
 |environment_id|App Environment ID of the Application Environment|Specify the Application Environment ID of the Application Environment.|
 |params|Config params details |Specify the config params and values in JSON format.|
-||||
+
 
 > # **Naming services**
 

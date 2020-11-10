@@ -1,7 +1,7 @@
 # Lab-03 Answer:
-#  2. Create a postman request to Manage TFE Credentials.
+#  2. Create a postman request to RITM Status Check
 
-**Endpoint:** https://api-central-sit.pwc.com/ngc-sandbox-service/v3/pwc_nextgen_request/manage_tfe_credentials
+**Endpoint:** https://api-central-sit.pwc.com/ngc-sandbox-service/v3/pwc_nextgen_request/ritm_status_check
 
 **Request Type:** POST
  
@@ -15,18 +15,17 @@
 **Request Body:**
 ```json
 {
-  "requested_for": "{{requested_for_email}}",
-  "environment_id": "{{environmentId}}"
+  "ritm_number": "RITM3212869"
 }
 ```
 **Response :**
 ```json
 {
     "result": {
-        "status": "success",
-        "message": "Requested Item created: RITM3216967",
-        "record": "RITM3216967",
-        "sysid": "f23a29831b0ce410060e4002cd4bcb97"
+        "number": "RITM3212869",
+        "stage": "fulfillment",
+        "state": "Work in Progress",
+        "state_code": "2"
     }
 }
 ```
